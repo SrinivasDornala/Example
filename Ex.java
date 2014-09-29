@@ -17,6 +17,8 @@ import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.io.Reader;
 import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -36,11 +38,14 @@ import java.util.Queue;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.SortedMap;
+import java.util.StringTokenizer;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.Vector;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import javax.print.attribute.standard.DateTimeAtCompleted;
  
 public class Ex extends Thread implements Hj  {
 
@@ -1487,7 +1492,7 @@ System.out.print(i);*/
 	System.out.println(s.trim());*/
 	/*char c = '1';
 	System.out.println((int)c);*/
-	Scanner scan = new Scanner(System.in);
+	/*Scanner scan = new Scanner(System.in);
 		int in = scan.nextInt();
 	for(int k = 0;k<in;k++){
  
@@ -1498,8 +1503,229 @@ System.out.print(i);*/
 	}
 	int ans = (int) Math.pow(2, n-1)*j;
 	System.out.println(ans);
+	}*/
+	
+	/*Scanner in = new Scanner(System.in);
+    int k = in.nextInt();
+    for(int l=0 ;l<k;l++){
+    String s = in.next().toLowerCase();
+    String s1 = in.next().toLowerCase();
+   	int j=s1.length();
+   	System.out.println(j);
+   int siz= s.length();
+   System.out.println(siz);
+	int cnt=0;
+    }*/
+	/*for(int len=2; len<=j;len++){
+		int x=0;
+	for(int i =0 ; i<(siz-j) ;i++){
+	 
+		String s2= s.substring(i, len+x);
+		System.out.println(s2);
+		String s3= s1.substring(i, len+x);
+		System.out.println(s3);
+		System.out.println(cnt);
+		if(s2.equals(s3)){cnt++;break; }
+		x++; 
+		 
+	} 
+    }
+	System.out.println(cnt);*/
+	/*boolean b=false;
+	
+	for(int i =2;i<=j;i++){
+		int x=0;
+		for(int m=0;m<=(j-i);m++){
+			b= s.contains(s1.substring(m, (i+x)));
+			System.out.println(b);
+			System.out.println(s1.substring(m, (i+x)));
+			x++;
+		}
+		
 	}
+	
+    }	*/	
+	/*Scanner in = new Scanner(System.in);
+    int k = in.nextInt();
+    for(int l=0 ;l<k;l++){
+    int s = in.nextInt();
+    int ans=1;
+    for(int i=1;i<=s;i++){
+    	if(i%2==0){
+    		ans+=1;
+    	}else ans = 2*ans;
+    }
+    System.out.println(ans);
+    }*/
+/*	Scanner in = new Scanner(System.in);
+    int k = in.nextInt();
+	int sec = 2;
+	int arr[]= new int [k];
+	for(int i=0;i<k;i++){
+		arr[i]= in.nextInt();
+	}
+ 
+	int left = arr[0];
+	int right = arr[1];
+	for(int i =2;i<arr.length;i++)
+	{
+		if(arr[i]==0)
+		{
+			if(10 - left< 10-right){
+				int j =10-left+1;
+				sec+=j;
+				left = arr[i];
+			}else{
+				int j =10-right+1;
+				sec+=j;
+				right = arr[i];
+			}
+		}else if(left == arr[i] || right ==arr[i]){
+			if(left ==arr[i]){left=arr[i];sec++;}
+			else {right=arr[i];sec++;}
+		}
+		else{
+			if(left>arr[i]&&right>arr[i])
+			{
+			if( left-arr[i]< right-arr[i]){
+				int j = left-arr[i]+1;
+				sec+=j;
+				left = arr[i];
+			}else{
+				int j =right-arr[i]+1;
+				sec+=j;
+				right = arr[i];
+			}
 			
+			}
+			else if(left<arr[i]&&right<arr[i])
+			{
+				if( arr[i]-left< arr[i]-right){
+					int j = arr[i]-left+1;
+					sec+=j;
+					left = arr[i];
+				}else{
+					int j =arr[i]-right+1;
+					sec+=j;
+					right = arr[i];
+				}
+				
+			}
+			else if(left>arr[i]&&right<arr[i])
+			{
+				if(  left-arr[i]< arr[i]-right){
+					int j = left-arr[i]+1;
+					sec+=j;
+					left = arr[i];
+				}else{
+					int j =arr[i]-right+1;
+					sec+=j;
+					right = arr[i];
+				}
+			}
+			else  if(left<arr[i]&&right>arr[i])
+			{
+				if( arr[i]-left< right-arr[i]){
+					int j =arr[i]-left+1;
+					sec+=j;
+					left = arr[i];
+				}else{
+				int j = right-arr[i]+1;
+				sec+=j;
+				right = arr[i];
+				}
+			}
+		}
+	}
+	 System.out.println(sec);*/
+	 /*long j=0;
+	for (int i = 0; i < 1000 ; i++) {
+		
+		for (int l = 0; l < 10000 ; l++) {
+			
+			for (int m = 0; m < 10000 ; m++) {
+				
+				j++;
+			}
+		}	}
+	System.out.println(j);*/
+	Scanner in = new Scanner(System.in);
+    String z = in.next();
+    char ch[] = z.toCharArray();
+     
+	int arr[][] = new int[1][ch.length];int cnt=0,inti=0;
+
+    for(int i= ch.length-1;i>=0;i--){
+     	arr[0][i]=  ch[inti]-48;
+     	System.out.print(arr[0][i]+" ");
+     	inti++;
+    }
+    String sz = in.next();
+    char ch1[] = sz.toCharArray();
+	int x[]= new int[ch1.length];
+	 for(int i=0;i<ch1.length;i++){
+	     	x[i]=  ch1[i]-48;
+	     	System.out.print(x[i]);
+	    }
+	//int  temp= y;
+	 System.out.println(ch.length);
+	 
+ 	
+	
+	int size = ch.length +x.length-1;
+	int ans[][] = new int[ch.length][size];
+	int a[][] = new int[ch.length][x.length+1];
+	
+	for(int j=0;j<ch.length;j++){
+		int temp1=0,c=0,d=0,ct=0;
+		for(int k =x.length-1;k>=0;k--){
+		temp1 = (int) (x[k]*arr[0][j]);
+		temp1 +=ct;
+		a[j][c] = (int) (temp1%10);
+		ct=temp1/10;
+		c++;
+		}
+		a[j][c]=ct;
+		for(int i =(size-j-1);i>=(ch.length-j-1);i--){
+		ans[j][i] = a[j][d];
+		System.out.print(ans[j][i]);
+		d++;
+		}System.out.println();
+		
+	
+	/*int ans[][] = new int[s.length()][size];
+	for(int j=0;j<s.length();j++){
+		long c = (long) ((x*arr[0][j]) );
+		String sc=String.valueOf(c);
+		System.out.println(c);
+		for(int i =(size-j-1);i>=0;i--){
+		ans[j][i] = (int) (c%10);
+		c=c/10; 
+		}*/
+		
+	} 
+	for(int j=0;j<ch.length;j++){
+	for(int i =0 ; i<size;i++){
+		System.out.print(ans[j][i]);
+	}
+	System.out.println();
+	}
+	int res[] = new int[size];
+	for(int i=size-1;i>=0;i--){
+		int temp1=0;
+		for(int j =0 ; j<ch.length;j++){
+			 temp1+=ans[j][i]; 
+		}
+		temp1 +=cnt;
+		res[i] = (int) (temp1%10);
+		cnt=temp1/10;
+		
+	}
+	for(int i =0 ;i<size;i++){
+		System.out.print(res[i]);
+	}
+	
+ 
 }
 
 
