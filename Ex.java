@@ -1649,7 +1649,7 @@ System.out.print(i);*/
 			}
 		}	}
 	System.out.println(j);*/
-	Scanner in = new Scanner(System.in);
+/*	Scanner in = new Scanner(System.in);
     String z = in.next();
     char ch[] = z.toCharArray();
      
@@ -1657,7 +1657,7 @@ System.out.print(i);*/
 
     for(int i= ch.length-1;i>=0;i--){
      	arr[0][i]=  ch[inti]-48;
-     	System.out.print(arr[0][i]+" ");
+     	//System.out.print(arr[0][i]+" ");
      	inti++;
     }
     String sz = in.next();
@@ -1665,13 +1665,9 @@ System.out.print(i);*/
 	int x[]= new int[ch1.length];
 	 for(int i=0;i<ch1.length;i++){
 	     	x[i]=  ch1[i]-48;
-	     	System.out.print(x[i]);
+	     	//System.out.print(x[i]);
 	    }
-	//int  temp= y;
-	 System.out.println(ch.length);
-	 
- 	
-	
+ 	// System.out.println(ch.length);
 	int size = ch.length +x.length-1;
 	int ans[][] = new int[ch.length][size];
 	int a[][] = new int[ch.length][x.length+1];
@@ -1688,12 +1684,12 @@ System.out.print(i);*/
 		a[j][c]=ct;
 		for(int i =(size-j-1);i>=(ch.length-j-1);i--){
 		ans[j][i] = a[j][d];
-		System.out.print(ans[j][i]);
+		//System.out.print(ans[j][i]);
 		d++;
-		}System.out.println();
+		}//System.out.println();
 		
 	
-	/*int ans[][] = new int[s.length()][size];
+	int ans[][] = new int[s.length()][size];
 	for(int j=0;j<s.length();j++){
 		long c = (long) ((x*arr[0][j]) );
 		String sc=String.valueOf(c);
@@ -1701,7 +1697,7 @@ System.out.print(i);*/
 		for(int i =(size-j-1);i>=0;i--){
 		ans[j][i] = (int) (c%10);
 		c=c/10; 
-		}*/
+		}
 		
 	} 
 	for(int j=0;j<ch.length;j++){
@@ -1724,10 +1720,167 @@ System.out.print(i);*/
 	for(int i =0 ;i<size;i++){
 		System.out.print(res[i]);
 	}
+	*/
+/*	String s= "heelo";
+	String s1= s+",";
+	System.out.println(s1);*/
+/*	Scanner in = new Scanner(System.in);
+	String s = in.next();
+	char ch[] = s.toCharArray();
+	Arrays.sort(ch);
+	String s1= "";
+	for (int i = 0; i < s.length(); i++) {
+		s1+= ch[i];
+	}
+	System.out.println(s1);	*/
 	
- 
-}
+/*	for(int i=1;i<=100;i++){
+		if(i%3==0&&i%5==0){
+			System.out.println("FizzBuzz");
+		}else if(i%3==0){
+			System.out.println("Fizz");
+		}else if(i%5==0){
+			System.out.println("Buzz");
+		}else System.out.println(i );
+	}
+	*/
+/*	Scanner scan= new Scanner(System.in);
+	String s = scan.next();
+	char ch[] = s.toCharArray();
+	int e[] = new int[ch.length];
+	for(int i =0;i<ch.length;i++){
+		e[i]= ch[i]-48;
+	}
+	int b[];int a[]= new int[e.length];int v=0 ;
+	for (int i =  e.length-1; i >=0; i--) {
+		a[v] = e[i];
+		v++;
+	}
+	b=e;
+	//System.out.println(b[0] + " "+b[1]);
+	int t = scan.nextInt();
+	int main[] = new int[(t*2)+2];
+	int tem[]= new int[(t*2)+2];
+	int len = main.length-1;
+	//System.out.println(len);
+	for (int i =  e.length-1; i >=0; i--) {
+		main[len]= e[i];
+		len--;
+	}
+	
+	for(int i=1;i<t;i++){
+		int res[][] = new int[2][(b.length*2)],ans[][]= new int[2][(b.length*2)];
+		int size = b.length*2;
+		//System.out.println(size);
+		int cnt=0;
+		for(int j=0;j<a.length;j++)
+		{
+			int temp1=0,c=0,d=0,ct=0;
+			//System.out.println(b.length);
+			for(int k =b.length-1;k>=0;k--)
+			{
+				temp1 = (int) (a[j]*b[k]);
+				temp1 +=ct;
+				res[j][c] = (int) (temp1%10);
+				//System.out.print(res[j][c]);
+				ct=temp1/10;
+				c++;
+			}
+			res[j][c]=ct;
+			for(int l =(size-j-1);l>=(a.length-j-1);l--){
+				ans[j][l]=res[j][d];
+				d++;
+			}
+		}
+		int result[] = new int[size];
+		for(int m=size-1;m>=0;m--){
+			int temp1=0;
+			for(int j =0 ; j<a.length;j++){
+				 temp1+=ans[j][m]; 
+			}
+			temp1 +=cnt;
+			result[m] =  (temp1%10);
+			cnt=temp1/10;
+		}
+		result = array(result);
+		int x= main.length;
+		int y= result.length-1;
+		for(int m=x-1;m>=x-result.length;m--){
+			int temp1=0;
+			temp1=result[y]+main[m] ; 
+			temp1 +=cnt;
+			tem[m] = (int) (temp1%10);
+			cnt=temp1/10;
+			y--;
+		}tem[x-result.length-1]=cnt;
+		for(int n=0;n<tem.length;n++){
+			main[n]= tem[n];
+		}
+		b= result;
+		
+	}
+	main = array(main);
+	for(int r=0;r<main.length;r++){
+		System.out.print(main[r]);
+		}System.out.println();*/
+	
+	/*int a[] = {0,0,0,0,6,5,2,5,6,2,1};
+	int b[] = array(a);
+	for (int i = 0; i < b.length; i++) {
+		System.out.print(b[i]);		
+	}*/
 
+	
+	Scanner scan= new Scanner(System.in);
+	int z = scan.nextInt();
+	for(int a=0;a<z;a++){
+		int x=0;
+	String s = scan.next();
+	char ch[] = s.toCharArray();
+	int e[] = new int[ch.length];
+
+	for(int i =0;i<ch.length;i++){
+		e[i]= ch[i]-48;
+	}
+
+	for(int i =0;i<e.length;i++){
+		x+=e[i];
+	}
+	System.out.println(x);
+	}
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+public static Set<Long> primeFactors(long number) 
+{
+	Set<Long> primefactors = new HashSet<>(); 
+	long copyOfInput = number; 
+	for (long i = 2; i <= copyOfInput; i++) 
+	{
+		if (copyOfInput % i == 0) 
+		{
+			primefactors.add(i);
+			copyOfInput /= i; i--; 
+		}
+	}
+	return primefactors;
+}
+public static int[] array(int[] a){
+	int cnt=0,c=0;int b[] = new int[a.length];
+	for(int i=0;i<a.length;i++){
+		if(a[i] ==0){
+			cnt++;
+		}else{
+			b=new int[a.length-cnt];
+			for(int j=cnt;j<a.length;j++){
+				b[c]= a[j];
+				c++;
+			}
+			break;
+		}
+	}
+	return b;
+	
+}
 
 public static final native void m();
 
